@@ -16,7 +16,7 @@ a:visited {
 }
 
 .admin-table-title {
-    font-weight:bold
+    font-weight:bold;
 }
 
 .comic-covers {
@@ -85,7 +85,7 @@ a:visited {
 }
 
 .collection {
-    padding-top: 25px
+    padding-top: 25px;
 }
 
 #navbar {
@@ -98,7 +98,7 @@ a:visited {
 
 .nav-logo {
     width:300px;
-    height:auto
+    height:auto;
 }
 
 .nav-links {
