@@ -165,11 +165,11 @@ textarea {
     display: flex;
     flex-direction: column;
     flex-wrap: column;
-    border: 2px solid;
     width: 100%;
     height: 150px;
     padding: 20px 0px;
 }
+
 .button-container {
     display: flex;
     justify-content: space-around;
@@ -199,6 +199,13 @@ textarea {
 .comic-covers-container a:link {
     text-decoration: none;
 
+}
+
+#footer-container {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-around;
+  
 }
 
 .footer-background {
@@ -329,7 +336,8 @@ textarea {
 }
 
 .card {
-       padding:0% 33%;
+    display: flex;
+    justify-content: center;
 }
 
 .card-top {
@@ -357,6 +365,7 @@ textarea {
     margin-left:130px;
     margin-top:70px;
     width:400px;
+    height: auto;
     border:solid;
     border-color:#fff;
     border-width: 3px;
@@ -364,7 +373,6 @@ textarea {
 }
 
 .card-desc {
-    margin:0;
     margin-bottom:50px;
     padding:30px;
     width:600px;
