@@ -56,6 +56,7 @@ textarea {
 }
 
 .nav-container {
+    padding-left: 35px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -73,7 +74,6 @@ textarea {
 }
 
 .nav-logo {
-    padding-left: 30px;
     width:300px;
     height:auto;
 }
@@ -137,7 +137,6 @@ textarea {
     display: flex;
     flex-direction: column;
     align-items: center;
-
 }
 
 .comic-covers-container {
@@ -218,8 +217,6 @@ textarea {
 }
 
 .footer-text {
-    display: flex;
-    flex-direction: column;
     margin-top: 50px;
     width: 250px;
     height:175px;
