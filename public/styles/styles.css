@@ -65,25 +65,41 @@ button {
     padding:3px 10px;
 }
 
-input {
-    padding: 3px;
-    border-radius: 4px;
-}
-
 select {
-    padding: 3px;
-    border-radius: 4px;
+    padding-right:150px;
+    text-align: left;
 }
 
 textarea {
-    padding: 5px 3px;
-    border-radius: 4px;
+    padding-right: 50px;
 }
- i {
+
+i {
+    padding-right: 25px;
+}
+
+form {
+    margin: auto;
+    max-width: 300px;
+}
+
+label {
     display: flex;
-    max-width: 130px;
-    justify-content: space-between;
- }
+    flex-direction: column;
+    align-self: center;
+    margin-bottom: 10px;
+    max-width: 300px;
+    margin-bottom: 15px;
+}
+
+input {
+    padding-right: 125px;
+}
+
+button {
+    width:75px;
+    margin:10% 33%;
+}
 
 
 .nav-container {
@@ -156,8 +172,7 @@ textarea {
     padding:3%;
     text-align: left;
     background-color: white;
-    border: 5px solid var(--dark-blue);
-    
+    border: 5px solid var(--dark-blue);    
 }
 
 .body-container h1, h2 {
@@ -264,8 +279,8 @@ textarea {
 .footer-social {
     display: flex;
     font-size: 1.3em;
-    max-width: 150px;
-    justify-content: space-between;
+    width: 175px;
+    justify-content: center;
 }
 
 #footer-container a:link {
@@ -292,8 +307,7 @@ textarea {
 }
 
 .button-center {
-    margin-left: 45%;
-    margin-bottom: 2%;
+
 }
 
 .admin {
@@ -324,47 +338,6 @@ textarea {
 #synopsis {
     padding-right:75px;
     padding-bottom: 100px;
-}
-
-.form {
-    text-align: center;
-}
-
-.label {
-    display:block;
-    padding: 20px;
-}
-
-#title {
-    padding-right:11%;
-}
-
-#author {
-        padding-right:9%;
-}
-
-#publisher {
-    padding-right: 7%;
-}
-
-#genre {
-    padding-right: 10%;
-}
-
-#pages {
-    padding-right: 1%;
-}
-
-#rating {
-    padding-right: 10%;
-}
-
-#email {
-    padding-right:10% ;
-}
-
-#password {
-    padding-right: 14%;
 }
 
 .comic-covers {
