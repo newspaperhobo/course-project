@@ -44,38 +44,10 @@ h3 {
     color: var(--yellow);
 }
 
-table {
-    border-spacing:0;
-}
-
-td { 
-    border: 1px solid var(--black);
-    border-collapse: collapse separate;
-    padding:10px;
-}
-
 ul {
     margin:0;
     padding:0;
     text-decoration: none;    
-}
-
-button {
-    background-color:var(--yellow);
-    padding:3px 10px;
-}
-
-select {
-    padding-right:150px;
-    text-align: left;
-}
-
-textarea {
-    padding-right: 50px;
-}
-
-i {
-    padding-right: 25px;
 }
 
 form {
@@ -96,11 +68,40 @@ input {
     padding-right: 125px;
 }
 
-button {
-    width:75px;
-    margin:10% 33%;
+select {
+    padding-right:150px;
+    text-align: left;
 }
 
+textarea {
+    padding-right: 50px;
+} 
+
+button {
+    background-color:var(--yellow);
+    padding:3px 10px;
+    width:75px;
+}
+
+.button-center {
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-around;
+}
+
+table {
+    border-spacing:0;
+}
+
+td { 
+    border: 1px solid var(--black);
+    border-collapse: collapse separate;
+    padding:10px;
+}
+
+i {
+    padding-right: 25px;
+}
 
 .nav-container {
     padding-left: 35px;
