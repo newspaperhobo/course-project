@@ -99,20 +99,19 @@ td {
     padding:10px;
 }
 
-i {
-    padding-right: 25px;
-}
-
 .nav-container {
     padding-left: 35px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
     background-color: var(--dark-blue);
     color:var(--white); 
     height:150px;
     font-family: "fred";
+}
+
+.nav-container i {
+    padding: 35px;
 }
 
 #nav-background {
@@ -125,6 +124,7 @@ i {
 .nav-logo {
     width:300px;
     height:auto;
+    
 }
 
 .nav-links {
@@ -271,6 +271,10 @@ i {
     height:175px;
 }
 
+.footer-text i {
+    padding-right: 25px;
+}
+
 .footer-ul * {
     display: flex;
     text-decoration: none;
@@ -404,4 +408,15 @@ i {
     color: var(--dark-blue);
     font-weight: bold;
     text-decoration: underline;
+}
+@media screen and (min-width: 768px) {
+    .nav-container i {
+        display: none;
+    }
+}
+@media screen and (min-width: 320px) and (max-width: 768px) {
+    .nav-container li {
+        display: none;
+    }
+
 }
