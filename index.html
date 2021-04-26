@@ -90,10 +90,14 @@
                         <br><a href="#">Details</a>
                     </figcaption>
                 </div>
-                <div class="comic-covers-single-container"><img class="comic-covers-img"
+                <div class="comic-covers-single-container">
+                    <img class="comic-covers-img"
                         src="public/images/parable-of-the-sower.jpg">
                     <figcaption class="desc-container"><em>Parable of the Sower</em>by Octavia E. Butler<br>4 Stars<a
                             href="#">Details</a></figcaption>
+                </div>
+                <div class="more-comics">
+
                 </div>
             </div>
             <div class="button-container"><button class="more">DISPLAY MORE</button></div>
@@ -135,6 +139,109 @@
             </div>
     </div>
     </footer>
+    <script>
+        // comic book array
+        const comicBooks = [
+
+{
+
+    title: "Fun Home: A Family Tragicomic",
+
+    author: "by Alison Bechdel",
+
+    rating: "5 stars",
+
+    href: "./fun-home.+html",
+
+    imgSrc: "./public/images/fun-home.jpg",
+
+    imgAlt: "Fun Home: A Family Tragicomic comic book cover",
+
+},
+
+{
+
+    title: "Hunter X Hunter Vol. 1",
+
+    author: "by Yoshihiro Togashi",
+
+    rating: "5 stars",
+
+    href: "./hunter-x-hunter.html",
+
+    imgSrc: "./public/images/hunter-x-hunter.jpg",
+
+    imgAlt: "Hunter X Hunter comic book cover",
+
+},
+
+{
+
+    title: "The Walking Dead, Vol. 1: Days Gone Bye",
+
+    author: "by Robert Kirkman",
+
+    rating: "4 stars",
+
+    href: "./the-walking-dead.html",
+
+    imgSrc: "./public/images/the-walking-dead.jpg",
+
+    imgAlt: "The Walking Dead, Vol. 1: Days Gone Bye comic book cover",
+
+}
+]
+
+// <div class="comic-covers-single-container">
+//                     <img class="comic-covers-img"
+//                         src="public/images/parable-of-the-sower.jpg">
+//                     <figcaption class="desc-container"><em>Parable of the Sower</em>by Octavia E. Butler<br>4 Stars<a
+//                             href="#">Details</a></figcaption>
+// grab "display more button"
+let displayMoreButton = document.querySelector(".more")
+let parentContainer = document.querySelector(".comic-covers-container")
+
+//create new html objects 
+const createNewContainer = function() {
+    for (let i = 0; i< comicBooks.length; i++) {
+// create new div element
+    let newDiv = document.createElement("div");
+    // set classname for div
+    newDiv.className= "comic-covers-single-container";
+    // create new img element
+    let newImg = document.createElement("img");
+     // set classname for img
+    newImg.className = "comic-covers-img";
+    // set attribute to the value of the key "imgSrc" within the called comic book object via loop
+    newImg.setAttribute("src", comicBooks[i].imgSrc);
+    // set attribute to the value of the key "imgAlt" within the called comic book object via loop
+    newImg.setAttribute("alt", comicBooks[i].imgAlt);
+    // create new fig caption
+    let newFigCap = document.createElement("figcaption")
+     // set classname for fig caption
+    newFigCap.className = "desc-container";
+    // set text content of fig caption - figure out how to format these! gotta clean up the inline styling tbh.
+    newFigCap.textContent = (`${comicBooks[i].title} ${comicBooks[i].author} ${comicBooks[i].rating}`);
+    console.log(newFigCap)
+    // create new href element 
+    let newLink = document.createElement("a")
+     // set attribute to the value of the key "href" within the called comic book object via loop
+    newLink.setAttribute("href", comicBooks[i].href);
+    // set text inside link to "details"
+    newLink.textContent = "Details";
+    // nest link inside fig cap
+    newFigCap.appendChild(newLink);
+    // nest image and fig cap inside newDiv
+    newDiv.appendChild(newImg);
+    newDiv.appendChild(newFigCap);
+    // nest newDiv inside large comic book container
+    parentContainer.appendChild(newDiv);
+    }}
+
+displayMoreButton.addEventListener("click", createNewContainer);
+
+
+    </script>
 </body>
 
 </html>
