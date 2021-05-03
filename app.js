@@ -1,42 +1,37 @@
 const express = require ('express');
 const morgan = require('morgan');
+const PORT = 3000;
+const path = require('path');
 
 const app = express();
 
-const PORT = 3000;
-
+app.use(express.static(path.join(__dirname, 'public')))
 app.use(morgan('combined'));
-
-// app.get('/', (req, res) => {
-//  res.sendFile(__dirname + '/views/pages/index.html')
-// })
-// app.get('/about', (req, res) => {
-//  res.sendFile(__dirname + '/views/pages/about.html')
-// })
-// app.get('/login', (req, res) => {
-//  res.sendFile(__dirname + '/views/pages/login.html')
-// })
-// app.get('/admin-console', (req, res) => {
-//  res.sendFile(__dirname + '/views/pages/admin.html')
-// })
-// app.get('/admin-console/create-book', (req, res) => {
-//  res.sendFile(__dirname + '/views/pages/create.html')
-// })
+app.set('view engine', 'ejs')
 
 app.get('/', (req, res) => {
- res.send('This route points to the Home page')
+ res.render('pages/index')
 })
 app.get('/about', (req, res) => {
- res.send('This route points to the About page')
+ res.render('pages/about')
 })
 app.get('/login', (req, res) => {
- res.send('This route points to the Login page')
+ res.render('pages/login')
 })
 app.get('/admin-console', (req, res) => {
- res.send('This route points to the Admin Console page')
+ res.render('pages/admin')
 })
 app.get('/admin-console/create-book', (req, res) => {
- res.send('This route points to the Create page')
+ res.render('pages/create')
+})
+app.get('/book/:id', (req, res) => {
+//     let params = req.params;
+//     let bookID = params.id;
+//  res.render(`pages/book/${bookID}`)
+ res.render('pages/book')
+})
+app.get('/admin-console/update-book/:id', (req, res) => {
+ res.render('pages/update')
 })
 
 app.listen(PORT, () => {

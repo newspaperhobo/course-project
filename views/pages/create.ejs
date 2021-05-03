@@ -1,0 +1,33 @@
+<%- include('../partials/head') -%>
+<%- include('../partials/nav') -%>
+    <div class="body-background"><div class="body-container"><h1>CREATE NEW COMIC</h1>
+    <form class= "form" action="#">
+        <label for="title" class="label">Title:
+        <input type="text" id="title" name="title" placeholder="Title"></label>
+        <label for="author" class="label">Author:
+        <input type="text" id="author" name="author" placeholder="Author"></label>
+        <label for="publisher" class="label">Publisher:
+        <select id="publisher" name="publisher">
+            <option value="select" disabled selected>Select</option>
+            <option value="boombox">BOOM! Box</option>
+            <option value="dccomics">DC Comics</option>
+            <option value="harryabrams">Harry N. Abrams</option>
+            <option value="iconbooks">Icon Books</option>
+            <option value="imagecomics">Image Comics</option>
+            <option value="marvel">Marvel</option>
+            <option value="simonschuster">Simon & Schuster</option>
+            <option value="topshelfprod">Top Shelf Productions</option>
+            <option value="vizmedia">VIZ Media LLC</option>
+            </select></label>
+        <label for="genre" class="label">Genre:
+        <input type="text" id="genre" name="genre" placeholder="Genre"></label>
+        <label for="pages" class="label">Number of Pages:
+        <input type="text" id="pages" name="pages" placeholder="Number of pages"></label>
+        <label for="rating" class="label">Rating:
+        <input type="text" id="rating" name="rating"></label>
+        <label for="synposis" class="label">Synopsis:
+        <textarea name="synopsis" id="synopsis">Synopsis</textarea></label>
+        </form>
+        <div class="button-center"><button>Submit</button></div>
+    </div>
+<%- include('../partials/footer') -%>

@@ -1,0 +1,34 @@
+<%- include('../partials/head') -%>
+<%- include('../partials/nav') -%>
+    <div class="body-background"><div class="body-container">
+    <h1>UPDATE COMIC</h1>
+       <form action="#" class="form">
+        <label for="title" class="label">Title:
+        <input type="text" id="title" name="title" value="Akira, Volume 1"></label>
+        <label for="author" class="label">Author:
+        <input type="text" id="author" name="author" value="Katsuhiro Otomo"></label>
+        <label for="publisher" class="label">Publisher:
+        <select id="publisher" name="publisher">
+            <option value="boombox">BOOM! Box</option>
+            <option value="dccomics">DC Comics</option>
+            <option value="harryabrams">Harry N. Abrams</option>
+            <option value="iconbooks">Icon Books</option>
+            <option value="imagecomics">Image Comics</option>
+            <option value="marvel">Marvel</option>
+            <option value="simonschuster">Simon & Schuster</option>
+            <option value="topshelfprod">Top Shelf Productions</option>
+            <option value="vizmedia">VIZ Media LLC</option>
+            <option value="kodansha" selected>Kodansha</option>
+            </select></label>
+        <label for="genre" class="label">Genre:
+        <input type="text" id="genre" name="genre" value="Science Fiction"></label>
+        <label for="pages" class="label">Number of Pages:
+        <input type="text" id="pages" name="pages" value="352"></label>
+        <label for="rating" class="label">Rating:
+        <input type="text" id="rating" name="rating" value="5"></label>
+        <label for="synopsis" class="label">Synopsis:
+        <textarea name="synopsis" id="synopsis">Welcome to Neo-Tokyo, built on the ashes of a Tokyo annihilated by a blast of unknown origin that triggered World War III. The lives of two streetwise teenage friends, Tetsuo and Kaneda, change forever when paranormal abilities begin to waken in Tetsuo, making him a target for a shadowy agency that will stop at nothing to prevent another catastrophe like the one that leveled Tokyo. At the core of the agency’s motivation is a raw, all-consuming fear of an unthinkable, monstrous power known only as Akira.</textarea></label>
+        </form>
+        <div class="button-center"><button class="button-center">Submit</button></div>  
+    </div></div>
+<%- include('../partials/footer') -%>
