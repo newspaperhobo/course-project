@@ -1,7 +1,7 @@
 <%- include('../partials/head') -%>
 <%- include('../partials/nav') -%>
     <div class="body-background"><div class="body-container"><h1>CREATE NEW COMIC</h1>
-    <form class= "form" action="/admin-console" method="POST">
+    <form class= "form" action="/books/:id" method="POST">
         <label for="title" class="label">Title:
         <input type="text" id="title" name="title" placeholder="Title"></label>
         <label for="author" class="label">Author:

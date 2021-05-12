@@ -1,5 +1,5 @@
 <tr>
     <td><%= comic.title %></td>
-    <td><button><a href="/admin-console/update-book/<%= comic._id %>">EDIT</a></button></td>
-    <td><button>DELETE</button></td>
+    <td><a href="/admin-console/update-book/<%= comic._id %>"><button>EDIT</button></a></td>
+    <td><form action="/books/<%= comic._id %>?_method=DELETE" method="POST"><button>DELETE</button></form></td>
 </tr>

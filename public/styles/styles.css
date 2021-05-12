@@ -82,7 +82,7 @@ label {
     margin-bottom: 15px;
 }
 
-input {
+input#email, input#password {
     padding-right: 125px;
 }
 
@@ -118,6 +118,10 @@ td {
     border: 1px solid var(--black);
     border-collapse: collapse separate;
     padding:10px;
+}
+
+a {
+    text-decoration: none;
 }
 
 .none {
