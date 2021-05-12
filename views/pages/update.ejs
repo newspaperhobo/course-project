@@ -9,6 +9,8 @@
         <input type="text" id="author" name="author" value="<%= comicDetail.author %>"></label>
         <label for="publisher" class="label">Publisher:
         <select id="publisher" name="publisher">
+        <!-- <% let optionTextContentArray = document.querySelectorAll("option.textContent"); %>
+        <% console.log(optionTextContentArray) %> -->
             <option value="boombox">BOOM! Box</option>
             <option value="dccomics">DC Comics</option>
             <option value="harryabrams">Harry N. Abrams</option>
@@ -18,7 +20,7 @@
             <option value="simonschuster">Simon & Schuster</option>
             <option value="topshelfprod">Top Shelf Productions</option>
             <option value="vizmedia">VIZ Media LLC</option>
-            <option value="kodansha" selected>Kodansha</option>
+            <option value="kodansha">Kodansha</option>
             </select></label>
         <label for="genre" class="label">Genre:
         <input type="text" id="genre" name="genre" value="<%= comicDetail.genre %>"></label>
