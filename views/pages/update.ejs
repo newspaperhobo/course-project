@@ -2,11 +2,11 @@
 <%- include('../partials/nav') -%>
     <div class="body-background"><div class="body-container">
     <h1>UPDATE COMIC</h1>
-       <form action="#" class="form">
+       <form action="/admin/?_method=PUT" class="form" method="POST">
         <label for="title" class="label">Title:
-        <input type="text" id="title" name="title" value="Akira, Volume 1"></label>
+        <input type="text" id="title" name="title" value="<%= comicDetail.title %>"></label>
         <label for="author" class="label">Author:
-        <input type="text" id="author" name="author" value="Katsuhiro Otomo"></label>
+        <input type="text" id="author" name="author" value="<%= comicDetail.author %>"></label>
         <label for="publisher" class="label">Publisher:
         <select id="publisher" name="publisher">
             <option value="boombox">BOOM! Box</option>
@@ -21,13 +21,15 @@
             <option value="kodansha" selected>Kodansha</option>
             </select></label>
         <label for="genre" class="label">Genre:
-        <input type="text" id="genre" name="genre" value="Science Fiction"></label>
+        <input type="text" id="genre" name="genre" value="<%= comicDetail.genre %>"></label>
         <label for="pages" class="label">Number of Pages:
-        <input type="text" id="pages" name="pages" value="352"></label>
+        <input type="text" id="pages" name="pages" value="<%= comicDetail.pages %>"></label>
         <label for="rating" class="label">Rating:
-        <input type="text" id="rating" name="rating" value="5"></label>
+        <input type="text" id="rating" name="rating" value="<%= comicDetail.rating %>"></label>
         <label for="synopsis" class="label">Synopsis:
-        <textarea name="synopsis" id="synopsis">Welcome to Neo-Tokyo, built on the ashes of a Tokyo annihilated by a blast of unknown origin that triggered World War III. The lives of two streetwise teenage friends, Tetsuo and Kaneda, change forever when paranormal abilities begin to waken in Tetsuo, making him a target for a shadowy agency that will stop at nothing to prevent another catastrophe like the one that leveled Tokyo. At the core of the agency’s motivation is a raw, all-consuming fear of an unthinkable, monstrous power known only as Akira.</textarea></label>
+        <textarea name="synopsis" id="synopsis" value=><%= comicDetail.synopsis %></textarea></label>
+        <label for="image" class="label">Image:
+        <input type="text" id="image" name="image" value="<%= comicDetail.image %>"></label>
         </form>
         <div class="button-center"><button class="button-center">Submit</button></div>  
     </div></div>

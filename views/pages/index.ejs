@@ -13,69 +13,9 @@
         <div class="body-container">
             <h2>COMPLETE COMIC COLLECTION</h2>
             <div class="comic-covers-container">
-                <div class="comic-covers-single-container"><img class="comic-covers-img"
-                        src="/images/fun-home.jpg">
-                    <figcaption class="desc-container"><em>Fun Home: A Family Tragicomic</em>by Alison Bedchel<br> 5
-                        Stars<a href="#">Details</a></figcaption>
-                </div>
-                <div class="comic-covers-single-container"><img class="comic-covers-img"
-                        src="/images/watchmen.jpg">
-                    <figcaption class="desc-container"><em>Watchmen</em>by Alan Moore<br>5 Stars <br><a
-                            href="#">Details</a></figcaption>
-                </div>
-                <div class="comic-covers-single-container"><img class="comic-covers-img"
-                        src="/images/hunter-x-hunter.jpg">
-                    <figcaption class="desc-container"><em>Hunter X Hunter: Vol. 1</em>by Alison Bedchel<br>5 Stars
-                        <br><a href="#">Details</a>
-                    </figcaption>
-                </div>
-                <div class="comic-covers-single-container"><img class="comic-covers-img"
-                        src="/images/lumberjanes.jpg">
-                    <figcaption class="desc-container"><em>Lumberjanes: Vol. 1</em>by Noelle Stevenson<br>4 Stars <br><a
-                            href="lumberjanes.html">Details</a></figcaption>
-                </div>
-                <div class="comic-covers-single-container"><img class="comic-covers-img"
-                        src="/images/one-piece.jpg">
-                    <figcaption class="desc-container"><em>Once Piece, Vol. 1: Romance Dawn</em>by Eiichiro Oda<br>5
-                        Stars <br><a href="#">Details</a></figcaption>
-                </div>
-                <div class="comic-covers-single-container"><img class="comic-covers-img" src="/images/wake.jpg">
-                    <figcaption class="desc-container"><em>Wake: The Hidden History of Women-Led Slave Revolts</em>by
-                        Rebecca Hall<br>4 Stars <br><a href="#">Details</a></figcaption>
-                </div>
-                <div class="comic-covers-single-container"><img class="comic-covers-img"
-                        src="/images/black-panther.jpg">
-                    <figcaption class="desc-container"><em>Black Panther: A Nation Under Our Feet Book 1</em>by
-                        Ta-Nehisi Coates<br>3 Stars<a href="#">Details</a></figcaption>
-                </div>
-                <div class="comic-covers-single-container"><img class="comic-covers-img"
-                        src="/images/the-walking-dead.jpg">
-                    <figcaption class="desc-container"><em>The Walking Dead, Vol 1: Days Gone Bye</em>by Robert
-                        Kirkman<br>4 Stars <br><a href="#">Details</a></figcaption>
-                </div>
-                <div class="comic-covers-single-container"><img class="comic-covers-img" src="/images/march.jpg">
-                    <figcaption class="desc-container"><em>March: Book One</em>by John Lewis<br>5 Stars<br><a
-                            href="#">Details</a></figcaption>
-                </div>
-                <div class="comic-covers-single-container"><img class="comic-covers-img" src="/images/batman.jpg">
-                    <figcaption class="desc-container"><em>Batman: The Dark Knight Returns</em>by Frank Miller<br>3
-                        Stars <br><a href="#">Details</a></figcaption>
-                </div>
-                <div class="comic-covers-single-container"><img class="comic-covers-img" src="/images/queer.jpg">
-                    <figcaption class="desc-container"><em>Queer: A Graphic History</em>by Meghan-John Barker<br>4 Stars
-                        <br><a href="#">Details</a>
-                    </figcaption>
-                </div>
-                <div class="comic-covers-single-container">
-                    <img class="comic-covers-img"
-                        src="/images/parable-of-the-sower.jpg">
-                    <figcaption class="desc-container"><em>Parable of the Sower</em>by Octavia E. Butler<br>4 Stars<a
-                            href="#">Details</a></figcaption>
-                </div>
-                <div class="more-comics">
-
-                </div>
-            </div>
+            <% for (comic of data) { %>
+             <%- include('../partials/single-book', { comic: comic }) -%>
+           <% } %>
             <div class="button-container"><button class="more">DISPLAY MORE</button></div>
         </div>
     </div>
