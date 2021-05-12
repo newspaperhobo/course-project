@@ -2,7 +2,7 @@
 <%- include('../partials/nav') -%>
     <div class="body-background"><div class="body-container">
     <h1>UPDATE COMIC</h1>
-       <form action="/admin/?_method=PUT" class="form" method="POST">
+       <form action="/books/<%= comicDetail._id %>?_method=PUT" class="form" method="POST">
         <label for="title" class="label">Title:
         <input type="text" id="title" name="title" value="<%= comicDetail.title %>"></label>
         <label for="author" class="label">Author:
@@ -30,7 +30,7 @@
         <textarea name="synopsis" id="synopsis" value=><%= comicDetail.synopsis %></textarea></label>
         <label for="image" class="label">Image:
         <input type="text" id="image" name="image" value="<%= comicDetail.image %>"></label>
-        </form>
         <div class="button-center"><button class="button-center">Submit</button></div>  
+        </form>
     </div></div>
 <%- include('../partials/footer') -%>

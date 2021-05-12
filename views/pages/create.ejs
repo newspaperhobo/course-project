@@ -1,7 +1,7 @@
 <%- include('../partials/head') -%>
 <%- include('../partials/nav') -%>
     <div class="body-background"><div class="body-container"><h1>CREATE NEW COMIC</h1>
-    <form class= "form" action="/admin" method="POST">
+    <form class= "form" action="/admin-console" method="POST">
         <label for="title" class="label">Title:
         <input type="text" id="title" name="title" placeholder="Title"></label>
         <label for="author" class="label">Author:
@@ -29,7 +29,7 @@
         <textarea name="synopsis" id="synopsis">Synopsis</textarea></label>
         <label for="image" class="label">Image:
         <input type="text" id="image" name="image" placeholder="Comic Image"></label>
-        </form>
         <div class="button-center"><button>Submit</button></div>
+        </form>
     </div>
 <%- include('../partials/footer') -%>
