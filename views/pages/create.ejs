@@ -3,32 +3,22 @@
     <div class="body-background"><div class="body-container"><h1>CREATE NEW COMIC</h1>
     <form class= "form" action="/books/:id" method="POST">
         <label for="title" class="label">Title:
-        <input type="text" id="title" name="title" placeholder="Title"></label>
+        <input type="text" id="title" name="title" placeholder="Title" required minlength="1"></label>
         <label for="author" class="label">Author:
-        <input type="text" id="author" name="author" placeholder="Author"></label>
+        <input type="text" id="author" name="author" placeholder="Author" required minlength="1"></label>
         <label for="publisher" class="label">Publisher:
-        <select id="publisher" name="publisher">
-            <option value="select" disabled selected>Select</option>
-            <option value="boombox">BOOM! Box</option>
-            <option value="dccomics">DC Comics</option>
-            <option value="harryabrams">Harry N. Abrams</option>
-            <option value="iconbooks">Icon Books</option>
-            <option value="imagecomics">Image Comics</option>
-            <option value="marvel">Marvel</option>
-            <option value="simonschuster">Simon & Schuster</option>
-            <option value="topshelfprod">Top Shelf Productions</option>
-            <option value="vizmedia">VIZ Media LLC</option>
-            </select></label>
+        <input type="text" id="publisher" name="publisher" placeholder="Publisher">
+        </label>
         <label for="genre" class="label">Genre:
         <input type="text" id="genre" name="genre" placeholder="Genre"></label>
         <label for="pages" class="label">Number of Pages:
-        <input type="text" id="pages" name="pages" placeholder="Number of pages"></label>
+        <input type="text" id="pages" name="pages" placeholder="Number of pages" required min="1"></label>
         <label for="rating" class="label">Rating:
-        <input type="text" id="rating" name="rating"></label>
+        <input type="text" id="rating" name="rating" placeholder="Rating" required min="1" max="5"></label>
         <label for="synposis" class="label">Synopsis:
-        <textarea name="synopsis" id="synopsis">Synopsis</textarea></label>
+        <textarea name="synopsis" id="synopsis" required minlength="20"></textarea></label>
         <label for="image" class="label">Image:
-        <input type="text" id="image" name="image" placeholder="Comic Image"></label>
+        <input type="text" id="image" name="image" placeholder="Image"></label>
         <div class="button-center"><button>Submit</button></div>
         </form>
     </div>

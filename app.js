@@ -1,6 +1,7 @@
 const express = require ('express');
 const morgan = require('morgan');
 const methodOverride = require('method-override');
+require('./config/connection');
 const PORT = 3000;
 const path = require('path');
 const app = express();
@@ -15,6 +16,8 @@ app.use(methodOverride('_method'));
 app.use(routes);
 
 app.set('view engine', 'ejs');
+
+
 
 app.listen(PORT, () => {
     console.log(`The server is listening on http://localhost:${PORT}`)

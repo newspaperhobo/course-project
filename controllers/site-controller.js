@@ -1,13 +1,19 @@
-const data = require('../starter-files/data.js');
+const Comic = require('../models/comic-model');
 
 module.exports = {
     index: (req, res) => {
-        res.render('pages/index', { data : data})
-       },
+        Comic.find({}, (error, allBooks) => {
+            if (error) {
+                return error
+            } else {
+                res.render('pages/index', { data : allBooks})
+            }
+        }) 
+    },
     about: (req, res) => {
         res.render('pages/about')
-       },
+    },
     login: (req, res) => {
         res.render('pages/login')
-       },
+    },
 }

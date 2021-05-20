@@ -4,34 +4,21 @@
     <h1>UPDATE COMIC</h1>
        <form action="/books/<%= comicDetail._id %>?_method=PUT" class="form" method="POST">
         <label for="title" class="label">Title:
-        <input type="text" id="title" name="title" value="<%= comicDetail.title %>"></label>
+        <input type="text" id="title" name="title" value="<%= comicDetail.title %>" required minlength="1"></label>
         <label for="author" class="label">Author:
-        <input type="text" id="author" name="author" value="<%= comicDetail.author %>"></label>
+        <input type="text" id="author" name="author" value="<%= comicDetail.author %>" required minlength="1"></label>
         <label for="publisher" class="label">Publisher:
-        <select id="publisher" name="publisher">
-        <!-- <% let optionTextContentArray = document.querySelectorAll("option.textContent"); %>
-        <% console.log(optionTextContentArray) %> -->
-            <option value="boombox">BOOM! Box</option>
-            <option value="dccomics">DC Comics</option>
-            <option value="harryabrams">Harry N. Abrams</option>
-            <option value="iconbooks">Icon Books</option>
-            <option value="imagecomics">Image Comics</option>
-            <option value="marvel">Marvel</option>
-            <option value="simonschuster">Simon & Schuster</option>
-            <option value="topshelfprod">Top Shelf Productions</option>
-            <option value="vizmedia">VIZ Media LLC</option>
-            <option value="kodansha">Kodansha</option>
-            </select></label>
+        <input type="text" id="publisher" name="publisher" value="<%= comicDetail.publisher%>">
         <label for="genre" class="label">Genre:
         <input type="text" id="genre" name="genre" value="<%= comicDetail.genre %>"></label>
         <label for="pages" class="label">Number of Pages:
-        <input type="text" id="pages" name="pages" value="<%= comicDetail.pages %>"></label>
+        <input type="text" id="pages" name="pages" value="<%= comicDetail.pages %>" required min="1"></label>
         <label for="rating" class="label">Rating:
-        <input type="text" id="rating" name="rating" value="<%= comicDetail.rating %>"></label>
+        <input type="text" id="rating" name="rating" value="<%= comicDetail.rating %>" required min="1" max="5"></label>
         <label for="synopsis" class="label">Synopsis:
-        <textarea name="synopsis" id="synopsis" value=><%= comicDetail.synopsis %></textarea></label>
+        <textarea name="synopsis" id="synopsis" required minlength="20"><%= comicDetail.synopsis %></textarea></label>
         <label for="image" class="label">Image:
-        <input type="text" id="image" name="image" value="<%= comicDetail.image %>"></label>
+        <input type="text" id="image" name="image"></label>
         <div class="button-center"><button class="button-center">Submit</button></div>  
         </form>
     </div></div>
