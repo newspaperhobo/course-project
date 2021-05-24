@@ -102,3 +102,7 @@ dist
 
 # TernJS port file
 .tern-port
+
+# Comic data JS/JSON file
+/comics.json
+/starter-files/data.js

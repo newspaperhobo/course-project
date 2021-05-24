@@ -24,9 +24,10 @@ module.exports = {
             image: req.body.image,
         })
         newComic.save();
-        res.redirect('/admin-console');
+        res.redirect('/admin-console', );
     },
     update_single_book_put: (req, res) => {
+        const { id } = req.params;
         Comic.findByIdAndUpdate(id, {$set: {
             title: req.body.title,
             author: req.body.author,

@@ -1,8 +1,9 @@
+require('dotenv').config();
 const express = require ('express');
 const morgan = require('morgan');
 const methodOverride = require('method-override');
 require('./config/connection');
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 const path = require('path');
 const app = express();
 const routes = require('./routes/index-routes');
