@@ -104,5 +104,5 @@ dist
 .tern-port
 
 # Comic data JS/JSON file
-comics.json
+/starter-files/comics.json
 /starter-files/data.js
