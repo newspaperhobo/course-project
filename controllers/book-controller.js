@@ -27,6 +27,7 @@ module.exports = {
         res.redirect('/admin-console');
     },
     update_single_book_put: (req, res) => {
+        const { id } = req.params;
         Comic.findByIdAndUpdate(id, {$set: {
             title: req.body.title,
             author: req.body.author,
