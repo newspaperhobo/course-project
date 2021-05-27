@@ -2,6 +2,7 @@ const Comic = require('../models/comic-model');
 const User = require('../models/userSchema');
 const bcrypt = require('bcrypt');
 const saltRounds = 10;
+let error;
 
 module.exports = {
     index: (req, res) => {
@@ -17,7 +18,7 @@ module.exports = {
         res.render('pages/about')
     },
     login_get: (req, res) => {
-        res.render('pages/login')
+        res.render('pages/login', {error : error})
     },
     login_post: (req, res) => {
         User.findOne({ username: req.body.username }, (error, foundUser) => {
@@ -29,7 +30,8 @@ module.exports = {
                         console.log(`user ${foundUser.username} successfully logged in`);
                         res.redirect('/admin-console')
                     } else {
-                        res.redirect('/login')
+                        error = true;
+                        res.render('pages/login', { error: error })
                     }
                 });
             }

@@ -368,6 +368,10 @@ a {
     height:auto;
 }
 
+.error {
+    text-align: center;
+}
+
 /* mobile design */
 .card {
     margin: 1.3em auto;
