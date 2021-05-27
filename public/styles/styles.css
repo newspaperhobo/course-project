@@ -15,17 +15,17 @@
 
 @font-face {
     font-family: "open-sans-reg";
-    src: url('../fonts/open_sans/OpenSans-Regular.ttf') format('truetype');
+    src: url('../fonts/Open_Sans/OpenSans-Regular.ttf') format('truetype');
 }   
 
 @font-face {
     font-family: "open-sans-bold";
-    src: url('../fonts/open_sans/OpenSans-Bold.ttf');
+    src: url('../fonts/Open_Sans/OpenSans-Bold.ttf');
 }
 
 @font-face {
     font-family: "open-sans-italic";
-    src: url('../fonts/open_sans/OpenSans-Italic.ttf');
+    src: url('../fonts/Open_Sans/OpenSans-Italic.ttf');
 }
 
 .italic {
