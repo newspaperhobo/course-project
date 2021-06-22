@@ -92,11 +92,10 @@ select {
 button {
     background-color:var(--yellow);
     padding:3px 10px;
-    width:75px;
 }
 
 .button-center {
-    margin-top: 5%;
+    margin-top: 0.3em;
     display: flex;
     justify-content: space-around;
 }

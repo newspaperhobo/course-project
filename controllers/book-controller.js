@@ -8,7 +8,7 @@ module.exports = {
             if (error) {
                 return error
             } else {
-                res.render('pages/book', { comicDetail: foundBook })
+                res.render('pages/book', { comicDetail: foundBook, user: req.user })
             }
         })
     },
@@ -24,7 +24,7 @@ module.exports = {
             image: req.body.image,
         })
         newComic.save();
-        res.redirect('/admin-console', );
+        res.redirect('/admin-console');
     },
     update_single_book_put: (req, res) => {
         const { id } = req.params;

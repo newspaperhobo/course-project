@@ -7,8 +7,9 @@
         <form class="form" action="/login" method="POST"><label for="username">Username:</label>
         <input type="text" id="username" name="username" placeholder="Username" required>
         <label for="password">Password:</label>
-        <input type="password" id="password" name="password" placeholder="Password" required minlength="10"> 
+        <input type="password" id="password" name="password" placeholder="Password" required> 
         <div class="button-center"><button>Submit</button></div>
     </form> 
+    <div class="button-center"><a href="/auth/google"><button>Login with Google</button></a></div>
     </div></div>
 <%- include('../partials/footer') -%>

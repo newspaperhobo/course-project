@@ -5,8 +5,12 @@
 <div class="burger"><ul class="nav-links">
     <li><a href="/" target="_self" rel="noopener noreferrer">HOME</a></li>
     <li><a href="/about" target="_self" rel="noopener noreferrer">ABOUT</a></li>
-    <li><a href="/login" target="_self" rel="noopener noreferrer">LOGIN</a></li>
+    <% if (!user) { %>
+        <li><a href="/login" target="_self" rel="noopener noreferrer">LOGIN</a></li>
     <li><a href="/register" target="_self" rel="noopener noreferrer">REGISTER</a></li>
+    <% } else { %>
+    <li><a href="/logout" target="_self" rel="noopener noreferrer">LOGOUT</a></li> 
+   <% } %>
 </ul>
 <a href="javascript:void(0);" class="menu">
     <i class="fas fa-bars" class="icon"></i>

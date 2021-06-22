@@ -12,5 +12,11 @@ router.route('/login')
 router.route('/register')
     .get(siteController.register_get)
     .post(siteController.register_post);
+router.route('/auth/google')
+    .get(siteController.google_get)
+router.route('/auth/google/admin-console')
+    .get(siteController.google_redirect_get);
+router.route('/logout')
+    .get(siteController.logout);
 
 module.exports = router;
